@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Manrope";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.card {
+  width: 630px;
+  background-color: var(--White);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  border-radius: 0.75rem;
+}
+
+.drawers {
+  width: 40%;
+}
+
+.drawers img {
+  width: 123%;
+  height: 100%;
+}
+
+.drawers,
+.drawers img {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.overview {
+  width: 60%;
+  height: 100%;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 3rem;
+  background-color: var(--White);
+}
+
+.title {
+  width: 22rem;
+  font-size: 1.25rem;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.description {
+  width: 23rem;
+  font-size: 0.85rem;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.share-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.profile {
+  width: 60%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.profile img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 10rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  width: 10rem;
+  color: var(--Grayish-Blue);
+}
+
+.btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--Light-Grayish-Blue);
+  border: none;
+}
+
+.btn img {
+  width: 50%;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-unselected {
+  background-color: var(--Light-Grayish-Blue);
+  filter: invert(0);
+}
+
+.btn-selected {
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+.share-card-selected {
+  width: 70%;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  top: -4.85rem;
+  left: 14.45rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.share-card-selected img {
+  width: 10%;
+}
+
+.share-span {
+  font-size: 0.85rem;
+  color: var(--Grayish-Blue);
+  letter-spacing: 0.25rem;
+}
+
+.share-card-unselected {
+  display: none;
+}
+
+ion-icon {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 6.15rem;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+@media only screen and (max-width: 750px) {
+  .card {
+    width: 60vw;
+  }
+
+  .overview {
+    position: static;
+  }
+
+  .title,
+  .description {
+    width: auto;
+  }
+
+  .share-section {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .btn {
+    margin-left: 3.5rem;
+  }
+
+  .share-card-selected {
+    width: 90%;
+    top: 7.5rem;
+    left: -1.5rem;
+  }
+
+  ion-icon {
+    transform: rotate(180deg);
+    top: -1.5rem;
+    left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+
+  .drawers,
+  .drawers img {
+    border-radius: 0;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+
+  .drawers {
+    width: 100%;
+    height: 100%;
+  }
+
+  .drawers img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .overview {
+    width: 100%;
+    line-height: 1.5;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 2rem 0 0 0;
+    gap: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin: 0 2.6rem 0.75rem 2.6rem;
+  }
+
+  .description {
+    font-size: 1.02rem;
+    margin: 0 2.85rem 1rem 2.85rem;
+  }
+
+  .share-section {
+    flex-direction: row;
+    position: relative;
+    justify-content: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .share-card-selected {
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+
+  .share-span {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .share-card-selected img {
+    width: 6.5%;
+  }
+
+  .share-card-selected :nth-child(1) {
+    margin-left: 2rem;
+  }
+
+  .share-card-selected :nth-child(2),
+  .share-card-selected :nth-child(3),
+  .share-card-selected :nth-child(4) {
+    margin-left: 1rem;
+  }
+
+  ion-icon {
+    display: none;
+  }
+
+  .btn-selected {
+    z-index: 99;
+    filter: invert(1);
+    opacity: 1;
+  }
+
+  .profile {
+    padding-left: 3rem;
+  }
+}
