@@ -22,9 +22,13 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ![](./src/assets/images/screenshot2.jpg)
 
+![](./src/assets/images/screenshot3.jpg)
+
+![](./src/assets/images/screenshot4.jpg)
+
 ### Links
 
-Solution URL: [https://seismicman.github.io/11-Social-Proof-Section-Master/](https://seismicman.github.io/11-Social-Proof-Section-Master/)
+Solution URL: [https://seismicman.github.io/12-Article-Preview-Component-Master/](https://seismicman.github.io/12-Article-Preview-Component-Master/)
 
 ## My process
 
